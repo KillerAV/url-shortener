@@ -1,0 +1,60 @@
+<script src="/socket.io/socket.io.js"></script>
+<script src="jquery-3.2.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+	var socket=io();
+	socket.on('sendingcount',function(msg){
+		var obj=JSON.parse(msg);
+		var count=obj.count;
+    $(".count").text(count);
+	});
+</script>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>URL Shortner</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="styling.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container">
+      <img src="images/logo.png">
+      <h1>URL SHORTNER</h1>
+    </div>
+    <form action="http://localhost:8080/form" method="POST">
+      <label for="url">URL</label>
+      <input type="text" name="givenurl"  id="url" placeholder="EXAMPLE:www.google.com">
+      <input type="submit" value="SUBMIT" id="submit">
+    </form>
+
+<div class="all">
+ <div class="counter">
+Number Of URLs Shortened
+
+	</div>
+	<div class="count"> 0 </div>
+</div>
+      
+          
+ <div class="footer">
+          <div class="container">
+          <p id="footercontent">&copy; Developed with &hearts; by Abhishek and Mitali</p>
+          </div>
+      
+      </div>
+  </body>
+</html>

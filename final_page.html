@@ -1,0 +1,77 @@
+<script src="/socket.io/socket.io.js"></script>
+<script src="jquery-3.2.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+	var socket=io();
+	socket.on('sendingurl',function(msg){
+		var obj=JSON.parse(msg);
+		/* obj.given has actual url
+			 obj.short helps to create short url
+			 shorturl="http://localhost:8080/s/" + obj.short
+			 */
+		var temp="http://localhost:8080/s/" + obj.short;
+		$(".t1").attr("href",temp);
+		$(".t1").text(temp);
+		$(".t2").text(obj.given);
+	});
+</script>
+
+<body>
+
+    <img src="images/logo.png">
+    <div id="text"> SHORT URL FOR:</div>
+    <br>
+	<div class="t2"> 123122445263t648350464985765243415w673849040872625456879304 </div>
+    <br><br><br>
+	<a class="t1" href="#" target="_blank">45698104756 </a>
+</body>
+
+<style>
+
+body{
+  background-image: url(images/pink.jpg);
+  background-repeat:no-repeat;
+  background-size: 100%;
+position: relative;
+
+}
+
+ #text{
+        color:white;
+        margin: 60px 0px 0px 100px;
+        font-size: 50px;
+        padding:30px 0;
+
+    }
+
+img{
+    height: 110px;
+    width:120px;
+    margin-top:40px;
+    margin-left:650px;
+
+
+}
+
+.t2{
+    color:purple;
+    background-color: rgba(255,255,255,0.5);
+    font-size: 50px;
+    margin-left: 200px;
+    margin-right:200px;
+    padding: 10px 20px;
+
+    overflow:hidden;
+    }
+
+    .t1{
+        color:deeppink;
+        font-size: 50px;
+        background-color: rgba(255,255,255,0.5);
+        margin-left: 200px;
+        margin-right:200px;
+        padding: 10px 20px;
+    }
+
+</style>

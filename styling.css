@@ -1,0 +1,98 @@
+body{
+  background: url(images/purple1.jpg) fixed ;
+  position: relative;
+
+}
+
+label{
+    color:white;
+}
+
+h1{
+    color:white;
+
+    padding: 30px 40px;
+    margin-top: 0px;
+    width:800px;
+    float:right;
+    font-size: 80px;
+    font-family: cursive;
+
+}
+
+form{
+    text-align: center;
+    padding: 30px 30px;
+    font-size: 35px;
+}
+
+#submit{
+    background-color: purple;
+    color:white;
+}
+
+#submit:hover{
+    background-color: white;
+    color: purple;
+    border: purple;
+    font-size: 38px;
+}
+
+img{
+    height: 100px;
+    width:105px;
+    margin-top:30px;
+    margin-left:35px;
+    float:left;
+}
+
+.container{
+    max-width: 1000px;
+    margin-top: 100px;
+    padding: 30px;
+    text-align:center;
+}
+#url{
+    width: 700px;
+}
+
+.all{
+    background: rgba(0,0,0,0.5);
+}
+.counter{
+   margin-left:550px;
+   margin-top:250px;
+   color: white;
+   font-family: cursive;
+   font-size:40px;
+}
+
+.count{
+  margin-left:765px;
+  font-family: cursive;
+  font-size:100px;
+  color: white;
+}
+
+.transbox{
+     margin: 30px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.6;
+}
+
+.footer{
+    background-color: rgba(0,0,0,0.5);
+    color:white;
+    font-size: 19px;
+    height:60px;
+    
+}
+
+#footercontent{
+    float:right;
+    margin-top:-10px;
+    margin-right:-80px;
+   
+    
+}
